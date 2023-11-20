@@ -1,30 +1,30 @@
 # PROYECTO INTEGRADOR CALL CENTER ANONYMOUS BANK
 Integrantes
-Gisele Salinas
-Nilce Daparo
-German Huber
-Jose Valperga
+- Gisele Salinas
+ - Nilce Daparo
+ - German Huber
+ - Jose Valperga
 
 ## PRESENTACIÓN
-De un call center se espera según la Corporación Financiera Internacional del Banco Mundial (Documento Measuring Call Center Performance Global Best Practices)
--	que el 80% de las llamadas sean atendidas en menos de 20” (Nivel de Servicio). Para esto analizamos las llamadas de un año completo.
--	que la tasa de abandono no supere el 8% de las llamadas
--	que la tasa promedio de asistencia para servicios financieros y empresarios sea de 282 segundos.
-Para explicar mejor cómo funciona el call center, la persona llama y atiende el denominado VRU (Voice Response Unit) que es el Bot que oficia de contestador automático. Allí se le pide a la persona que se identifique de alguna manera (Customer ID) y que seleccione el servicio que necesita (“Presione 1 para…”).  Hecho esto, normalmente ingresa en cola de espera (“Todos nuestros representantes están ocupados…”), se escucha algún tema musical (en los 90 “Para Elisa” de Beethoven era un clásico) hasta ser atendida por un operador.
-Nuestra tarea consiste en analizar el Call Center del Banco “Anonymous Bank”, en Israel. El dataset contiene las llamadas registradas durante 12 meses (desde el 01/01/99 hasta el 31/12/99.
-El call center está conformado por:
-• 8 posiciones de operadores para recibir llamadas de clientes actuales y potenciales.
-• 1 posición de supervisor
-• 5 posiciones de operadores para llamadas para soporte de internet home banking
-En cuanto a los horarios de atención, y por tratarse de un banco en Israel, se debe tener en cuenta el respeto del sabath, lo que marca que el Domingo sea el primer día laborable, de la semana, y el viernes, el último.
-Durante los días de semana (Domingos a Jueves), el call center opera desde las 7:00 de la mañana hasta la medianoche. Cierra a las 14 hs del Viernes y reabre a las 20:00 del Sábado. El servicio automático (VRU) opera los 7 días de la semana, 24 horas al día (7x24).
-Aunque existen 3 niveles de prioridad para los clientes, la política del banco establece que las prioridades marcadas como 0 (Clientes Potenciales) y 1 (Clientes Regulares) sean tratadas indistintamente con prioridad 1 (Cliente Regular). Existe también la prioridad 2 para los Clientes Prioritarios. Para el análisis vamos a adoptar esos 2 niveles de tratamiento, Prioridad 1 para potenciales y regulares y 2 para prioritarios.
-Finalmente, existen tres posibles finalizaciones para cada llamada: cliente abandonó la llamada, cliente fue atendido por un operador, se ignora lo que sucedió con dicha llamada. Al ser muy escasas estas últimas, no las hemos tomado en cuenta en el análisis.
+### De un call center se espera según la Corporación Financiera Internacional del Banco Mundial (Documento Measuring Call Center Performance Global Best Practices)
+### -	que el 80% de las llamadas sean atendidas en menos de 20” (Nivel de Servicio). Para esto analizamos las llamadas de un año completo.
+### -	que la tasa de abandono no supere el 8% de las llamadas
+### -	que la tasa promedio de asistencia para servicios financieros y empresarios sea de 282 segundos.
+### Para explicar mejor cómo funciona el call center, la persona llama y atiende el denominado VRU (Voice Response Unit) que es el Bot que oficia de contestador automático. Allí se le pide a la persona que se identifique de alguna manera (Customer ID) y que seleccione el servicio que necesita (“Presione 1 para…”).  Hecho esto, normalmente ingresa en cola de espera (“Todos nuestros representantes están ocupados…”), se escucha algún tema musical (en los 90 “Para Elisa” de Beethoven era un clásico) hasta ser atendida por un operador.
+### Nuestra tarea consiste en analizar el Call Center del Banco “Anonymous Bank”, en Israel. El dataset contiene las llamadas registradas durante 12 meses (desde el 01/01/99 hasta el 31/12/99.
+### El call center está conformado por:
+### • 8 posiciones de operadores para recibir llamadas de clientes actuales y potenciales.
+### • 1 posición de supervisor
+### • 5 posiciones de operadores para llamadas para soporte de internet home banking
+### En cuanto a los horarios de atención, y por tratarse de un banco en Israel, se debe tener en cuenta el respeto del sabath, lo que marca que el Domingo sea el primer día laborable, de la semana, y el viernes, el último.
+### Durante los días de semana (Domingos a Jueves), el call center opera desde las 7:00 de la mañana hasta la medianoche. Cierra a las 14 hs del Viernes y reabre a las 20:00 del Sábado. El servicio automático (VRU) opera los 7 días de la semana, 24 horas al día (7x24).
+### Aunque existen 3 niveles de prioridad para los clientes, la política del banco establece que las prioridades marcadas como 0 (Clientes Potenciales) y 1 (Clientes Regulares) sean tratadas indistintamente con prioridad 1 (Cliente Regular). Existe también la prioridad 2 para los Clientes Prioritarios. Para el análisis vamos a adoptar esos 2 niveles de tratamiento, Prioridad 1 para potenciales y regulares y 2 para prioritarios.
+### Finalmente, existen tres posibles finalizaciones para cada llamada: cliente abandonó la llamada, cliente fue atendido por un operador, se ignora lo que sucedió con dicha llamada. Al ser muy escasas estas últimas, no las hemos tomado en cuenta en el análisis.
 
 ## DATOS ANUALES
 
-Estamos frente a un banco con unos 13.000 clientes que realizan más de 440 mil llamadas al año, donde prácticamente el 20% de las mismas son abandonadas por parte de quien llama. Un poco más del 5% abandona en el contestador automático y el resto, un poco más del 14%, lo hace en la cola de espera. INSIGHT: Tenemos un 18% de llamadas repetidas, que se contrasta con el 20% de abandonos. Al estar ambas calculadas sobre el total de llamadas, podemos suponer que el 90% de los que abandona llama, por lo menos, una segunda vez.
-Con estos datos advertimos que hay una alta tasa de abandonos, la que supera ampliamente el máximo del 8% esperado, y el hecho de que estén abandonando en cola de espera nos indica que la misma es muy larga y puede estar excediendo los 20” 
+### Estamos frente a un banco con unos 13.000 clientes que realizan más de 440 mil llamadas al año, donde prácticamente el 20% de las mismas son abandonadas por parte de quien llama. Un poco más del 5% abandona en el contestador automático y el resto, un poco más del 14%, lo hace en la cola de espera. INSIGHT: Tenemos un 18% de llamadas repetidas, que se contrasta con el 20% de abandonos. Al estar ambas calculadas sobre el total de llamadas, podemos suponer que el 90% de los que abandona llama, por lo menos, una segunda vez.
+### Con estos datos advertimos que hay una alta tasa de abandonos, la que supera ampliamente el máximo del 8% esperado, y el hecho de que estén abandonando en cola de espera nos indica que la misma es muy larga y puede estar excediendo los 20” 
 
 ## ATENCION AL CLIENTE
 
