@@ -4,6 +4,7 @@ Integrantes
  - Nilce Daparo
  - German Huber
  - Jose Valperga
+ - #### Proyecto realizado para graduación de Data Analytics en Digital House
 
 ## PRESENTACIÓN
 ### De un call center se espera según la Corporación Financiera Internacional del Banco Mundial (Documento Measuring Call Center Performance Global Best Practices)
